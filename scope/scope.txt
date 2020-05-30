@@ -1,0 +1,13 @@
+변수 메모리에 어떤 값을 가리키고 있는 이름
+
+scope: 유효범위
+namespace를 기반으로 계산됨
+namespace는 build-in, global, enclosed, local 나눠짐
+
+build-in: 파이썬에 내장되어있는 것 파이썬으로 작성된 코드 어디에서나 사용 가능
+global: 파일 단위 모듈안에서 유효
+enclosed : clouser 함수 (함수 안에 함수) 내부함수가 외부함수의 변수 접근 가능
+local:클래스나 함수의 내부에 유효 
+
+키워드(global, nonlocal)을 이용해서 원하는 value를 변경가능! 
+
