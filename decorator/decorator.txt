@@ -1,0 +1,7 @@
+from functools import wraps
+에서 제공해주는 
+@wraps(func)
+데코레이터를 써서 클로저에서 반환되는 객체의 속성이 wrapper함수의 속성으로 표시 되지 않도록 내부적으로 처리됨
+
+class에서 decorator 구현 할때는 __call__ 메서드를 정의하고 로직을 작성하면 됨.>!
+class_decorator.py 봐봐~ 
