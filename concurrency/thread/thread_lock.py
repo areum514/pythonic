@@ -9,19 +9,20 @@ def blocking_lock(lock):
     logging.debug("Start blocking lock")
 
     while True:
-        time.sleep(1)
-        lock.acquire()
-        """with lock:
-            logging.debug("Grab it")
-            time.sleep(0.5)
-        with same..!! but only can use blocking lock if you want to use with non-blocking lock inheritance will can use it
-        """
+        """ time.sleep(1)
+        lock.acquire() #락 잡기
         try:
             logging.debug("Grab it")
             time.sleep(0.5)
         finally:
             logging.debug("Release")
-            lock.release()
+            lock.release() #락풀기 """
+        time.sleep(1)
+        with lock:
+            logging.debug("Grab it")
+            time.sleep(0.5)
+        """same..!! but only can use blocking lock if you want to use with non-blocking lock inheritance will can use it
+        """
 
 
 def nonblocking_lock(lock):
