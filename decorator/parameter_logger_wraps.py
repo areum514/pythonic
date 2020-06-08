@@ -9,7 +9,8 @@ def mesure_run_time(func):
         start = time.time()
         result = func(*args, **kwargs)
         end = time.time()
-        print(f"{func.__name__}' function running time {round((end-start),2)}")
+        print("%s' function running time %d" %
+              (func.__name__, round((end-start), 2)))
         return result
 
     return wrapper
@@ -20,7 +21,7 @@ def parameter_logger(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
-        print(f"[{timestamp}] args: {args}, kwargs: {kwargs}")
+        print("[%s] args: %s, kwargs: %s" % (timestamp, args, kwargs))
         return func(*args, **kwargs)
     return wrapper
 

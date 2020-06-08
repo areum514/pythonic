@@ -36,17 +36,17 @@ def sum(items):
     return ret
 
 
-def iterator(loop_count):
+def generator(loop_count):
     result = []
     for i in range(loop_count):
         result.append(i)
-    return result
+    yield result
 
 
 def summary(count):
     cpu, mem, runtime = 0, 0, 0
     for i in range(count):
-        items = iterator(100000)
+        items = generator(100000)
         cpu, mem, runtime = sum(items)
     return (cpu/count, mem/count, runtime/count)
 

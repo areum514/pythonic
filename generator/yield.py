@@ -1,7 +1,7 @@
 def gen():
     value = 1
     while True:
-        value = yield value
+        value = yield value #yield로 값을 반환하는 동시에 할당 
 
 
 def main():

@@ -22,3 +22,5 @@ def worker(delay_time):
 
 if __name__ == "__main__":
     worker(5)
+"""f = MesureRuntime(worker)
+    f(5)"""

@@ -15,7 +15,6 @@ class MesureRuntime:
         return result
 
 
-@MesureRuntime
 def worker(delay_time):
     time.sleep(delay_time)
 

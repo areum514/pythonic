@@ -2,8 +2,8 @@ import sys
 
 
 def get_type_and_size(value):
-    print(f"type: {type(value)}")
-    print(f"size: {sys.getsizeof(value)}")
+    print("type: %s" % type(value))
+    print("size: %d" % sys.getsizeof(value))
 
 
 def main():
@@ -12,6 +12,7 @@ def main():
 
     print("=== Range size : 100 ===")
     get_type_and_size(range(100))
+
 
 if __name__ == "__main__":
     main()
